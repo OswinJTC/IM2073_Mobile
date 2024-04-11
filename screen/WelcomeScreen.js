@@ -6,7 +6,7 @@ const WelcomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to the MCQ App</Text>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Mcq')}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Level')}>
         <Text style={styles.buttonText}>Start Quiz</Text>
       </TouchableOpacity>
     </View>
