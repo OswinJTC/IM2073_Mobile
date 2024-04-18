@@ -1,10 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground  } from 'react-native';
 
 const LevelScreen = ({ navigation }) => {
   return (
+    <ImageBackground
+      source={{ uri: 'https://media.istockphoto.com/id/609077324/vector/seamless-question-mark-background.jpg?s=612x612&w=0&k=20&c=WY5eo1mwbGFv0rhKr6JoHRDVjm1r3JZSXXqbpxUMaUg=' }}
+      style={[styles.background, { opacity: 0.8 }]}
+    >
     <View style={styles.container}>
-      <Text style={styles.title}>Select Quiz Difficulty</Text>
+      <Text style={styles.title}>¿ How Confident Are You ?</Text>
       <TouchableOpacity
         style={[styles.button, styles.easy]}
         onPress={() => navigation.navigate('EMcq')}>
@@ -27,19 +31,26 @@ const LevelScreen = ({ navigation }) => {
               <Text style={styles.backButtonText}>Back to Welcome</Text>
             </TouchableOpacity>
     </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
   title: {
-    fontSize: 24,
+    fontSize: 20,
     marginBottom: 20,
+    fontWeight: 'bold',
+    color: '#011627', 
   },
   button: {
     width: '80%',
@@ -50,16 +61,20 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 18,
-    color: '#fff',
+    color: '#011627',
+    fontWeight: 'bold',
+    fontFamily: 'serif',
   },
   backButton: {
     backgroundColor: '#007BFF',
     padding: 10,
     borderRadius: 8,
+    marginTop: 20,
   },
   backButtonText: {
-    color: '#FFF',
+    color: '#011627',
     fontSize: 18,
+    fontWeight: 'bold',
     textAlign: 'center',
   },
   easy: {

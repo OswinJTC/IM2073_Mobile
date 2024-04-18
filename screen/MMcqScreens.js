@@ -139,7 +139,7 @@ const percentageD = totalResponses > 0 ? (historyData.countD || 0) / totalRespon
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F0F2F5',
+    backgroundColor: '#EEAE54',
   },
   content: {
     padding: 20,
